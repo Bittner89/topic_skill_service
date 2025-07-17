@@ -25,6 +25,7 @@ class JsonDataManager:  #Eine Klasse zum Verwalten von JSON-Daten, die das Lesen
         except Exception as e:
             print(f"Ein unerwarteter Fehler ist aufgetreten beim Lesen von {filepath}: {e}")
             return []
+        
 
 
     def write_data(self, filepath, data):       #Schreibt Daten in eine JSON-Datei.
