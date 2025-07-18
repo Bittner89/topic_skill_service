@@ -7,9 +7,12 @@ from data_manager import JsonDataManager
 
 app = Flask(__name__)
 data_manager = JsonDataManager()
+
 # erstellen der Konstanten Variablen
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 TOPICS_FILE = os.path.join(DATA_DIR, 'topics.json')
+SKILLS_FILE = os.path.join(DATA_DIR, 'skills.json')
+
 
 # erstellung einer instanz von Flask app und erstellung einer Haupt route
 @app.route('/')
@@ -22,7 +25,13 @@ def hello_world():
 def get_topics():
     topics = data_manager.read_data(TOPICS_FILE)
     return jsonify(topics) 
-   
+
+
+@app.route('/skills', methods=['GET'])
+def get_skills():
+    skills = data_manager.read_data(SKILLS_FILE)
+    return jsonify(skills)
+
 # Aufrufen der Haupt funktion
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
