@@ -1,7 +1,8 @@
 # Importiere die nötigen module (json, os, flask , jsonify)
 
 import os
-from flask import Flask, jsonify
+import uuid
+from flask import Flask, jsonify, request
 from data_manager import JsonDataManager
 #erstellung einer flask Anwendung
 
@@ -50,6 +51,51 @@ def get_skill_by_id(id):
         return jsonify(skill)
     else:
         return jsonify({"error": "Skill not found."}), 404
+    
+
+@app.route('/topics', methods=['POST'])
+def create_topic():
+    new_topic_data = request.json
+
+    if not new_topic_data or 'name' not in new_topic_data or 'description' not in new_topic_data:
+        return jsonify({"error": "'name'and 'description for the topic are required in the request body."}), 400
+
+    new_topic_id = str(uuid.uuid4())
+
+    topic = {
+        "id": new_topic_id,
+        "name": new_topic_data['name'],
+        "description": new_topic_data['description']
+    }
+
+    topics = data_manager.read_data(TOPICS_FILE)
+    topics.append(topic)
+
+    data_manager.write_data(TOPICS_FILE, topics)
+
+    return jsonify(topic), 201
+
+@app.route('/skills', methods=['POST'])
+def create_skill():
+    new_skill_data = request.json
+
+    if not new_skill_data or 'name' not in new_skill_data or 'topicId' not in new_skill_data:
+        return jsonify({"error": "'name'and 'topicId' for the topic are required in the request body."}), 400
+
+    new_skill_id = str(uuid.uuid4())
+
+    skill = {
+        "id": new_skill_id,
+        "name": new_skill_data['name'],
+        "topicId": new_skill_data['topicId']
+    }
+
+    skills = data_manager.read_data(SKILLS_FILE)
+    skills.append(skill)
+
+    data_manager.write_data(SKILLS_FILE, skills)
+
+    return jsonify(skill), 201    
 
 # Aufrufen der Haupt funktion
 if __name__ == '__main__':

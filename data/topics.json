@@ -1,17 +1,37 @@
 [
-  {
-    "id": "t1",
-    "name": "Web Development Fundamentals",
-    "description": "Kernkonzepte für die Entwicklung von Webanwendungen, einschließlich HTML, CSS und JavaScript."
-  },
-  {
-    "id": "t2",
-    "name": "Frontend Development",
-    "description": "Fokus auf die Benutzeroberfläche und Interaktion, wie React, Vue oder Angular."
-  },
-  {
-    "id": "t3",
-    "name": "Backend Development",
-    "description": "Server-seitige Logik, Datenbanken und APIs, z.B. mit Python Flask oder Node.js Express."
-  }
+    {
+        "id": "t1",
+        "name": "Web Development Fundamentals",
+        "description": "Kernkonzepte f\u00fcr die Entwicklung von Webanwendungen, einschlie\u00dflich HTML, CSS und JavaScript."
+    },
+    {
+        "id": "t2",
+        "name": "Frontend Development",
+        "description": "Fokus auf die Benutzeroberfl\u00e4che und Interaktion, wie React, Vue oder Angular."
+    },
+    {
+        "id": "t3",
+        "name": "Backend Development",
+        "description": "Server-seitige Logik, Datenbanken und APIs, z.B. mit Python Flask oder Node.js Express."
+    },
+    {
+        "id": "a23345be-36e4-4f62-b195-8b2917a21dd3",
+        "name": "Grundlagen der K\u00fcnstlichen Intelligenz",
+        "description": "Eine Einf\u00fchrung in die Konzepte und Anwendungen von KI, einschlie\u00dflich maschinellem Lernen und neuronalen Netzen."
+    },
+    {
+        "id": "8cca2f0d-6718-4df7-bf79-e29e4163800f",
+        "name": "Grundlagen der K\u00fcnstlichen Intelligenz",
+        "description": "Eine Einf\u00fchrung in die Konzepte und Anwendungen von KI, einschlie\u00dflich maschinellem Lernen und neuronalen Netzen."
+    },
+    {
+        "id": "7516f455-dcc0-486b-b57a-6ee596515330",
+        "name": "Grundlagen der K\u00fcnstlichen Intelligenz",
+        "description": "Eine Einf\u00fchrung in die Konzepte und Anwendungen von KI, einschlie\u00dflich maschinellem Lernen und neuronalen Netzen."
+    },
+    {
+        "id": "449d2431-0d68-4d6e-8a92-a0d735b868c9",
+        "name": "Grundlagen der K\u00fcnstlichen Intelligenz",
+        "description": "Eine Einf\u00fchrung in die Konzepte und Anwendungen von KI, einschlie\u00dflich maschinellem Lernen und neuronalen Netzen."
+    }
 ]
