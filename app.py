@@ -32,6 +32,15 @@ def get_skills():
     skills = data_manager.read_data(SKILLS_FILE)
     return jsonify(skills)
 
+
+@app.route('/topics/<id>', methods=['GET'])
+def get_topic_by_id(id):
+    topics = data_manager.read_data(TOPICS_FILE)
+    topic = next((topic for topic in topics if topic.get('id').lower() == id).lower(), None)
+    
+    return jsonify(topic)
+
+
 # Aufrufen der Haupt funktion
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
