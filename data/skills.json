@@ -1,11 +1,5 @@
 [
     {
-        "id": "s1",
-        "name": "HTML & CSS Layouts (Aktualisiert)",
-        "topicId": "t1",
-        "difficulty": "intermediate"
-    },
-    {
         "id": "s2",
         "name": "CSS Layouts (Flexbox/Grid)",
         "topicId": "t1",

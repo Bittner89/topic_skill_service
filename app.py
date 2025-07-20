@@ -159,5 +159,52 @@ def update_skill(id):
 
     return jsonify(skills[found_index]), 200
 
+# --- NEUER ENDPUNKT für DELETE /topics/<id> ---
+@app.route('/topics/<id>', methods=['DELETE'])
+def delete_topic(id):
+    topics = data_manager.read_data(TOPICS_FILE)
+
+    # Topic finden und dessen Index speichern
+    found_index = -1
+    for i, t in enumerate(topics):
+        if t['id'] == id:
+            found_index = i
+            break
+
+    if found_index == -1:
+        # Wenn das Topic nicht gefunden wurde, 404 Not Found
+        return jsonify({"error": "Topic not found"}), 404
+
+    # Topic aus der Liste entfernen
+    # pop(index) entfernt das Element an der angegebenen Position
+    deleted_topic = topics.pop(found_index)
+
+    # Aktualisierte Liste speichern
+    data_manager.write_data(TOPICS_FILE, topics)
+
+    # Erfolgreiche Antwort: 204 No Content
+    # 204 No Content ist die Best Practice für DELETE-Anfragen, die erfolgreich waren
+    # und keine Antwortdaten zurückgeben müssen.
+    return '', 204 # Leerer String als Body, 204 als Statuscode
+
+# --- NEUER ENDPUNKT für DELETE /skills/<id> ---
+@app.route('/skills/<id>', methods=['DELETE'])
+def delete_skill(id):
+    skills = data_manager.read_data(SKILLS_FILE)
+
+    found_index = -1
+    for i, s in enumerate(skills):
+        if s['id'] == id:
+            found_index = i
+            break
+
+    if found_index == -1:
+        return jsonify({"error": "Skill not found"}), 404
+
+    skills.pop(found_index)
+    data_manager.write_data(SKILLS_FILE, skills)
+
+    return '', 204
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

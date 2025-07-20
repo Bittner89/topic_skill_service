@@ -1,10 +1,5 @@
 [
     {
-        "id": "t1",
-        "name": "Web Dev Grundlagen (Aktualisiert)",
-        "description": "Alle Kernkonzepte des Web Development, jetzt mit Fokus auf moderne Standards."
-    },
-    {
         "id": "t2",
         "name": "Frontend Development",
         "description": "Fokus auf die Benutzeroberfl\u00e4che und Interaktion, wie React, Vue oder Angular."
