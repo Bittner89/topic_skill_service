@@ -1,8 +1,8 @@
 [
     {
         "id": "t1",
-        "name": "Web Development Fundamentals",
-        "description": "Kernkonzepte f\u00fcr die Entwicklung von Webanwendungen, einschlie\u00dflich HTML, CSS und JavaScript."
+        "name": "Web Dev Grundlagen (Aktualisiert)",
+        "description": "Alle Kernkonzepte des Web Development, jetzt mit Fokus auf moderne Standards."
     },
     {
         "id": "t2",
@@ -31,6 +31,11 @@
     },
     {
         "id": "449d2431-0d68-4d6e-8a92-a0d735b868c9",
+        "name": "Grundlagen der K\u00fcnstlichen Intelligenz",
+        "description": "Eine Einf\u00fchrung in die Konzepte und Anwendungen von KI, einschlie\u00dflich maschinellem Lernen und neuronalen Netzen."
+    },
+    {
+        "id": "8cf1dd5e-5998-481a-9699-cb7f390af745",
         "name": "Grundlagen der K\u00fcnstlichen Intelligenz",
         "description": "Eine Einf\u00fchrung in die Konzepte und Anwendungen von KI, einschlie\u00dflich maschinellem Lernen und neuronalen Netzen."
     }
